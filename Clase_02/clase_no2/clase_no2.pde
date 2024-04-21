@@ -1,9 +1,10 @@
 void setup(){
   size(800,600);
+  frameRate(300); // Cantidad de ejecuciones 
 }
 float x=0,y=0;
 void draw(){
-  point(x++,y+=(float)height/(float)width);
-  //line(0,0,width,height);
-  println("Valor de y: "+y);
+  x+=0.1;
+  y=sin(x); //(Esta x se toma como valor para el cálculo)
+  point(x*10, y*100+height/2); 
 }
